@@ -1,0 +1,50 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque - Loja Azul</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Controle de Estoque/h1>
+    </div>
+
+    <div class="menu">
+        <a href="#home">Home</a>
+        <a href="#cadastro">Cadastrar Produto</a>
+        <a href="#estoque">Controle de Estoque</a>
+    </div>
+
+    <div class="main" id="home">
+        <h2>Produtos Cadastrados</h2>
+        <div id="produtoLista">
+            Ainda não tem produtos cadastrados.
+        </div>
+    </div>
+    <div style="border-top: 2px solid #000; border-bottom: 2px solid #000;">
+        <!-- Conteúdo principal -->
+        <form id="formCadastro" data-editing="false">
+            <input type="text" id="codigoProduto" placeholder="Código do Produto" required>
+            <input type="text" id="nomeProduto" placeholder="Nome do Produto" required>
+            <input type="text" id="tipoProduto" placeholder="Tipo do Produto" required>
+            <input type="number" id="valorProduto" placeholder="Valor" step="0.01" required>
+            <input type="number" id="quantidadeProduto" placeholder="Quantidade" required>
+            <button type="submit">Salvar Produto</button>
+        </form>
+
+        <div id="produtoLista">
+            <!-- A lista de produtos será carregada aqui -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
